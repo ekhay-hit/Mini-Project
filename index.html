@@ -1,14 +1,22 @@
-<!DOCTYPE >
+<!DOCTYPE html>
 <html lang="EN">
   <head>
     <meta charset="UFT-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <!-- <script src="./assets/scripts/main.js"></script> -->
   </head>
 
   <body>
     <header>
+      <menu class="menu">
+        <a href="./assets/pages/html.html" alt="Github account">HTML</a>
+        <a href="./assets/pages/ccs.html" alt="Github account">CSS</a>
+        <a href="./assets/pages/git.html" alt="Github account">GIT</a>
+        <a href="./assets/pages/javaScript.html" alt="Github account">JavaScript</a>
+
+      </menu>
       <nav class="nav">
         <a href="https://github.com/" alt="Github account">Github</a>
         <a href="#heading1" alt="Coming soon">Portfolio</a>
@@ -18,14 +26,44 @@
 
     <main>
       <section class="first-section">
-        <h1 class="center" id="heading1">My New Website</h1>
+        <div class="nav-menu">
+          
+          <button class="show-modal nav-item">HTML</button>
+          <button class="show-modal nav-item">CSS</button>
+          <button class="show-modal nav-item">GIT</button>
+          <button class="show-modal nav-item">JavaScript</button>
+        </div>
+          <div class=" modal modal-0 hidden ">
+            <button class="close-modal">&times;</button>
+            <h1>HTML</h1>
+            <p>
+              Hypertext Markup Language (HTML) is one of the three cornerstone languages used in web development: HTML, CSS, and JS. HTML is used to create the structure of a webpage. It is made up of elements which work together to provide content and the basic framework for all pages on the web.
+            </p>
+          </div>
+          <div class="modal modal-1 hidden">
+            <button class="close-modal">&times;</button>
+            <h1>CSS</h1>
+            <p>
+              CSS stands for Cascading Style Sheets language and is used to stylize elements written in a markup language such as HTML
+            </p>
+          </div>
+          <div class="modal modal-2 hidden">
+            <button class="close-modal">&times;</button>
+            <h1>GIT</h1>
+            <p>
+              Git is a version control system that lets you manage and keep track of each version of your project. To access Git, we use the command line.
+            </p>
+          </div>
+          <div class=" modal modal-3 hidden">
+            <button class="close-modal">&times;</button>
+            <h1>JavaScript</h1>
+            <p>
+              JavaScript is an object-oriented computer programming language commonly used to create interactive effects within web browsers.
+              
+            </p>
+          </div> 
+          <div class="overlay hidden"></div>
 
-        <figure class="center">
-          <img class="coming-soon" src="./assets/image.jpeg" />
-          <figcaption>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          </figcaption>
-        </figure>
       </section>
       <section class="form">
         <form id="contact-us" class="center">
@@ -49,7 +87,86 @@
         </form>
       </section>
     </main>
+<script>
+ // assigning varaibles selectors
+const modal = document.querySelector('.modal');
+let id=999999;
+// const htmlModal = document.querySelector('.modal-0');
+// const cssModal = document.querySelector('.css-modal');
+// const gitModal = document.querySelector('.git-modal');
+// const jsModal = document.querySelector('.js-modal');
+// selector to blur the backround
+const overlay = document.querySelector('.overlay');
+const btnCloseModal = document.querySelectorAll('.close-modal');
+const btnOpenModal = document.querySelectorAll('.show-modal');
 
+// showing modal
+// const showHtml = document.querySelector('.show');
+// const showCss = document.querySelector('.css-modal');
+// const showGit = document.querySelector('.git-modal');
+// const showJs = document.querySelector('.js-modal');
+
+//function to show the modal
+// const showModal =function(i){
+//   document.querySelector(`.modal-${i}`).classList.remove('hidden');
+//     overlay.classList.add("overlay");
+// };
+
+// function to hide modal 
+// const hideModal = function (i){
+//   document.querySelector(`.modal-${i}`).classList.add('hidden');
+//     overlay.classList.remove("hidden")
+// };
+
+for(let i=0; i<btnOpenModal.length; i++)
+   
+  // btnOpenModal.addEventListener("click", showModal(i));
+  // btnCloseModal.addEventListener("click", hideModal(i));
+  btnOpenModal[i].addEventListener('click', function(){
+    // checking if hidden class not exist and adding it before removing from clicked topic
+    for(let i=0; i<btnOpenModal.length; i++){
+    if(!document.querySelector(`.modal-${i}`).classList.contains('hidden')){
+      document.querySelector(`.modal-${i}`).classList.add('hidden');
+      overlay.classList.add('hidden');
+    }
+  }
+  // after all hidden class been removed. adding the class to the appropriate topic
+  document.querySelector(`.modal-${i}`).classList.remove('hidden');
+  overlay.classList.remove('hidden');
+  console.log(i);
+
+  });
+
+  for(let i=0; i<btnOpenModal.length; i++)
+  btnCloseModal[i].addEventListener('click',function(){
+    document.querySelector(`.modal-${i}`).classList.add('hidden');
+    overlay.classList.add('hidden');
+  });
+
+  for(let i=0; i<btnOpenModal.length; i++)
+  overlay.addEventListener('click', function(){
+    document.querySelector(`.modal-${i}`).classList.add('hidden');
+    overlay.classList.add('hidden');
+  });
+
+
+// to  find the name of the key console log e object  and click that key to get the name, use inspect mode to find it in the console
+for(let i=0; i<btnOpenModal.length; i++)
+document.addEventListener('keydown', function (e) {
+    // check if escape key was clicked and  the modle is not hidden
+    if(!document.querySelector(`.modal-${i}`).classList.contains('hidden')){
+    if (e.key === 'Escape' )
+      document.querySelector(`.modal-${i}`).classList.add('hidden');
+      overlay.classList.add('hidden');
+    }
+  
+  });
+
+  
+
+
+</script>
     <footer id="footer"></footer>
+    
   </body>
 </html>
