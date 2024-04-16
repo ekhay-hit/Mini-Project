@@ -2,7 +2,7 @@
     margin:0px;
 }
 body{
-    background-color: rgb(28, 30, 31);
+    background-color: rgb(37, 44, 48);
 }
 
 
@@ -79,7 +79,7 @@ header {
        font-size: large;
         width: 80%;
         background-color: yellow;
-        height: 5%;
+        height: 6%;
         border-radius: 20px 5px;
         box-shadow: 6px 6px 4px;
         font-family:monospace;
