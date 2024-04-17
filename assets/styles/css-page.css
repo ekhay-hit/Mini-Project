@@ -1,91 +1,80 @@
-*{
-    margin:0px;
+* {
+  margin: 0px;
 }
-body{
-    background-color: rgb(30, 36, 39);
+body {
+  background-color: rgb(30, 36, 39);
 }
-
 
 header {
-    background-color: black;
-    height: 40px;
+  background-color: black;
+  height: 5%;
+  color: white;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  a {
     color: white;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    width: 100%;
-    a{
-        color: white;
-        text-decoration: none;
-        padding-right: 30px;
-        }
+    text-decoration: none;
+    padding-right: 30px;
   }
-
-  #footer {
-    background-color: black;
-    height: 100px;
-    color: white;
-    width: 100%;
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-  }
-
-
-.html-nav{
-    padding-top: 10px;
-    height: 4%;
-    text-align: right;
-    padding-right: 20px;
-    background-color: black;
-   
-   
 }
 
- .menu {
-    float: left;
-    margin-left: 2px;
-    padding-top: 7px;;
-    
-    } 
+#footer {
+  background-color: rgb(191, 75, 75);
+  height: 9%;
+  color: white;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
 
-/* .center {
-        text-align: center;
-        }
-     */
-.side-bar{
- 
-  
-    position:absolute;
-    left:9px;
-    top:50px;
-    bottom: 110px;
-    border-radius: 20px;
-    /* display: flex; */
-    /* flex-direction: column; */
-    height:auto;
-    width: 300px;
-    /* background-color: rgb(15, 15, 8); */
-    color: white;
+.html-nav {
+  padding-top: 10px;
+  height: 4%;
+  text-align: right;
+  padding-right: 20px;
+  background-color: black;
+}
 
-    .btn-html{
-        /* display: block; */
-       position: relative;
-       left: 16px;
-       text-align: center;
-        margin: 15px auto 15px ;
-       font-size: large;
-        width: 80%;
-        background-color: yellow;
-        height: 6%;
-        border-radius: 20px 5px;
-        box-shadow: 6px 6px 4px;
-        font-family:monospace;
-        font:bold;
-  
-        
+.menu {
+  float: left;
+  margin-left: 2px;
+  padding-top: 7px;
+}
 
-    }
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  height: 82vh;
+  width: 28vh;
+  margin-top: 49px;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  left: 10px;
+  border-radius: 0px 50px 50px 0px;
+  /* justify-content:flex-end ; */
+  background-color: rgb(26, 33, 27);
+  color: white;
+
+  .btn-html {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+    text-align: start;
+
+    font-size: large;
+
+    background-color: yellow;
+
+    border-radius: 20px 5px;
+    box-shadow: 6px 6px 4px;
+    font-family: monospace;
+    font: bold;
+  }
 }
