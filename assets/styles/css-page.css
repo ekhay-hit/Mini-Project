@@ -5,6 +5,7 @@ body {
   background-color: rgb(30, 36, 39);
 }
 
+
 header {
   background-color: black;
   height: 5%;
@@ -49,8 +50,11 @@ header {
 .side-bar {
   display: flex;
   flex-direction: column;
+  flex: 1 1 auto;
+	overflow-y: scroll;
+  scrollbar-color:red;
   height: 82vh;
-  width: 28vh;
+  width: 300px;
   margin-top: 49px;
   align-items: center;
   justify-content: space-around;
@@ -63,18 +67,37 @@ header {
 
   .btn-html {
     display: flex;
+    margin-bottom: 15px;
     justify-content: space-around;
     flex-direction: column;
-
+    width: 150px;
+    align-items: center;
     text-align: start;
-
     font-size: large;
-
     background-color: yellow;
-
     border-radius: 20px 5px;
     box-shadow: 6px 6px 4px;
+    border:2px solid rgb(125, 102, 19);
     font-family: monospace;
     font: bold;
   }
+}
+
+.main{
+  display: flex;
+  /* flex-direction: row; */
+  height: 100%;
+  width: 100%;
+
+  
+}
+.modal{
+  background-color: yellow;
+  margin-top: 100px;
+  margin-left: 100px;
+  height: 60vh;
+  width: 80%;
+  border: 6px solid rgb(232, 44, 44);
+  border-radius: 80px 0px 80px;
+ 
 }
