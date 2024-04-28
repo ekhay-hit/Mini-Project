@@ -101,3 +101,21 @@ header {
   border-radius: 80px 0px 80px;
  
 }
+ 
+.hidden{
+  display: none;
+}
+
+.modal-0 {
+ 
+  display: flex;
+  background-color:green;
+  justify-content: center;
+  margin:10px;
+  padding:30px;
+  border-radius: 80px 0px 80px;
+  /* height: 0vh; */
+  /* width: 80%; */
+ 
+
+ }
